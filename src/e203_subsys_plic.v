@@ -110,6 +110,18 @@ module e203_subsys_plic(
   input  gpio_irq_29,
   input  gpio_irq_30,
   input  gpio_irq_31,
+  
+  input  extr_irq_00,
+  input  extr_irq_01,
+  input  extr_irq_02,
+  input  extr_irq_03,
+  input  extr_irq_04,
+  input  extr_irq_05,
+  input  extr_irq_06,
+  input  extr_irq_07,
+  input  extr_irq_08,
+  input  extr_irq_09,
+  input  extr_irq_10,
 
   input  clk,
   input  rst_n
@@ -192,6 +204,17 @@ module e203_subsys_plic(
   wire plic_irq_i_49 = pwm2_irq_2;
   wire plic_irq_i_50 = pwm2_irq_3;
   wire plic_irq_i_51 = i2c_mst_irq;
+  wire plic_irq_i_52 = extr_irq_00;
+  wire plic_irq_i_53 = extr_irq_01;
+  wire plic_irq_i_54 = extr_irq_02;
+  wire plic_irq_i_55 = extr_irq_03;
+  wire plic_irq_i_56 = extr_irq_04;
+  wire plic_irq_i_57 = extr_irq_05;
+  wire plic_irq_i_58 = extr_irq_06;
+  wire plic_irq_i_59 = extr_irq_07;
+  wire plic_irq_i_60 = extr_irq_08;
+  wire plic_irq_i_61 = extr_irq_09;
+  wire plic_irq_i_62 = extr_irq_10;
                          
 
   sirv_plic_top u_sirv_plic_top(
@@ -260,6 +283,17 @@ module e203_subsys_plic(
     .io_devices_0_49 (plic_irq_i_49),
     .io_devices_0_50 (plic_irq_i_50),
     .io_devices_0_51 (plic_irq_i_51),
+    .io_devices_0_52 (plic_irq_i_52),
+    .io_devices_0_53 (plic_irq_i_53),
+    .io_devices_0_54 (plic_irq_i_54),
+    .io_devices_0_55 (plic_irq_i_55),
+    .io_devices_0_56 (plic_irq_i_56),
+    .io_devices_0_57 (plic_irq_i_57),
+    .io_devices_0_58 (plic_irq_i_58),
+    .io_devices_0_59 (plic_irq_i_59),
+    .io_devices_0_60 (plic_irq_i_60),
+    .io_devices_0_61 (plic_irq_i_61),
+    .io_devices_0_62 (plic_irq_i_62),
     .io_harts_0_0    (plic_ext_irq ) 
   );
 

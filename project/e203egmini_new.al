@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
     <Project_Created_Time>2018-01-15 17:48:49</Project_Created_Time>
-    <TD_Version>4.1.670</TD_Version>
-    <UCode>01110000</UCode>
+    <TD_Version>4.2.885</TD_Version>
+    <UCode>10011010</UCode>
     <Name>e203egmini_new</Name>
     <HardWare>
         <Family>EG4</Family>
@@ -174,7 +174,7 @@
         </RouteProperty>
     </Property>
     <Project_Settings>
-        <Step_Last_Change>2018-08-13 10:33:42</Step_Last_Change>
+        <Step_Last_Change>2018-11-18 21:04:25</Step_Last_Change>
         <Current_Step>0</Current_Step>
         <Step_Status>true</Step_Status>
     </Project_Settings>

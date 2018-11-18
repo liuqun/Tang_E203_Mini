@@ -1134,6 +1134,30 @@ module e203_subsys_main(
   wire  gpio_irq_29;
   wire  gpio_irq_30;
   wire  gpio_irq_31;
+  
+  wire  extr_irq_00;
+  wire  extr_irq_01;
+  wire  extr_irq_02;
+  wire  extr_irq_03;
+  wire  extr_irq_04;
+  wire  extr_irq_05;
+  wire  extr_irq_06;
+  wire  extr_irq_07;
+  wire  extr_irq_08;
+  wire  extr_irq_09;
+  wire  extr_irq_10;
+  
+  assign extr_irq_00 = 1'b0;		//connecting pwm3_0 to this causes bad things, no clue why.
+//  assign extr_irq_01 = 1'b0;
+//  assign extr_irq_02 = 1'b0;
+//  assign extr_irq_03 = 1'b0;
+//  assign extr_irq_04 = 1'b0;
+  assign extr_irq_05 = 1'b0;
+  assign extr_irq_06 = 1'b0;
+  assign extr_irq_07 = 1'b0;
+  assign extr_irq_08 = 1'b0;
+  assign extr_irq_09 = 1'b0;
+  assign extr_irq_10 = 1'b0;
 
 
  e203_subsys_plic u_e203_subsys_plic(
@@ -1174,7 +1198,7 @@ module e203_subsys_main(
     .pwm2_irq_0             (pwm2_irq_0 ),
     .pwm2_irq_1             (pwm2_irq_1 ),
     .pwm2_irq_2             (pwm2_irq_2 ),
-    .pwm2_irq_3             (pwm2_irq_3 ),
+    .pwm2_irq_3             (pwm2_irq_3 ),       
                                         
     .i2c_mst_irq            (i2c_mst_irq),
 
@@ -1210,6 +1234,18 @@ module e203_subsys_main(
     .gpio_irq_29            (gpio_irq_29),
     .gpio_irq_30            (gpio_irq_30),
     .gpio_irq_31            (gpio_irq_31),
+    
+    .extr_irq_00			(extr_irq_00),
+    .extr_irq_01			(extr_irq_01),
+    .extr_irq_02			(extr_irq_02),
+    .extr_irq_03			(extr_irq_03),
+    .extr_irq_04			(extr_irq_04),
+    .extr_irq_05			(extr_irq_05),
+    .extr_irq_06			(extr_irq_06),
+    .extr_irq_07			(extr_irq_07),
+    .extr_irq_08			(extr_irq_08),
+    .extr_irq_09			(extr_irq_09),
+    .extr_irq_10			(extr_irq_10),
 
     .clk                    (hfclk  ),
     .rst_n                  (per_rst_n) 
@@ -1592,7 +1628,12 @@ e203_subsys_clint u_e203_subsys_clint(
     .pwm2_irq_1             (pwm2_irq_1 ),
     .pwm2_irq_2             (pwm2_irq_2 ),
     .pwm2_irq_3             (pwm2_irq_3 ),
-                                        
+    
+    .pwm3_irq_0             (extr_irq_01 ),
+    .pwm3_irq_1             (extr_irq_02 ),
+    .pwm3_irq_2             (extr_irq_03 ),
+    .pwm3_irq_3             (extr_irq_04 ),
+                                     
     .i2c_mst_irq            (i2c_mst_irq),
 
     .gpio_irq_0             (gpio_irq_0 ),

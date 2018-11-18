@@ -98,14 +98,37 @@ module sirv_plic_top(
   input   io_devices_0_49,
   input   io_devices_0_50,
   input   io_devices_0_51,
+  input   io_devices_0_52,
+  input   io_devices_0_53,
+  input   io_devices_0_54,
+  input   io_devices_0_55,
+  input   io_devices_0_56,
+  input   io_devices_0_57,
+  input   io_devices_0_58,
+  input   io_devices_0_59,
+  input   io_devices_0_60,
+  input   io_devices_0_61,
+  input   io_devices_0_62,
   output  io_harts_0_0
 );
 
 wire plic_irq;
 assign io_harts_0_0 = plic_irq;
 
-localparam PLIC_IRQ_NUM = 53;// The number can be enlarged as long as not larger than 1024
+localparam PLIC_IRQ_NUM = 64;// The number can be enlarged as long as not larger than 1024
 wire [PLIC_IRQ_NUM-1:0] plic_irq_i = { 
+				  io_devices_0_62  ,
+				  io_devices_0_61  ,
+				  io_devices_0_60  ,
+				  
+				  io_devices_0_59  ,
+				  io_devices_0_58  ,
+				  io_devices_0_57  ,
+				  io_devices_0_56  ,
+				  io_devices_0_55  ,
+				  io_devices_0_54  ,
+				  io_devices_0_53  ,
+				  io_devices_0_52  ,
                   io_devices_0_51  ,
                   io_devices_0_50  ,
 
